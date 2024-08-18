@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel Blog</title>
+    <!-- css linking -->
+    <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="https://www.pikpng.com/pngl/m/60-605865_travel-png-adventure-travel-trade-association-logo-clipart.png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg  class">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://theplanetd.com/images/the-planet-d-logo-2021.png" alt="" width="150px " height="60px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse adjust" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active blog" aria-current="page" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active blog" aria-current="page" href="#">DESTINATIONS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active blog" aria-current="page" href="#">EXPERIENCES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active blog" aria-current="page" href="#">ITINERARIES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active blog" aria-current="page" href="#"><span>NOMADIC</span> <span>LIVING</span></a>
+              </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle blog active" href="#" role="button" data-bs-toggle="dropdown" >
+                  TRAVEL TIPS 
+                </a>
+               </ul>
+                <li class="nav-item">
+                    <a class="nav-link active blog" aria-current="page" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA4BJREFUSEvllk2IHEUUx/+vq2d38OAhF78/SFxGgyh4yEE9iKAS1IvEVRBUEhNUgiAmO9Odrs5LV8/0LMavhQSFxKgoguIhHkS96EnBiwoKrgY2SKIiBhNNmN043c/ttnfNJDPTPUKSg3WtV//f+6j3qgjnadF54qIUmJnHqra9JhGZIOBiiPxMlnVgvtv9gplP/hfnh4LDMLzKFtkpwD0Aqn0AHQH2qzjeWmc+NIoDA8FREDwJohcAjJUQXIDI447vv1bCNjPpC46M2QngmVykC6KXReQTS2R2PknmKpXKSkqSawHcTsAmACoTI9rW8LxWGfgZ4LYxTwiw+x+36IBY1t2u634/SKzZbN5gJckHAC7Ljog80PD9d4rgPeBpY65LgK8BVADMVuL41i3MvxWJTDNfnij1GYArABy34rhWZ/5p2LkecGTMRwDuBHAScVxzmA8WQZf220FwoxB9mZfvDUfrR0qBn2desaDUkTxdLzZ8/+my0CW7ljFvE/AggD9W1WorJicn40EayxG3jFlHwLupoYjc7Pr+56OCozC8HyJZfYs0/gWH4VMk8lJ6yBobu7Ber/85Mpj5aig1l4GJHnU97/XCiCNjnMWezVphVa1mD0vTILGZmZnxE8eOzef7U47WzxaDg2ATiF5JDVUcXzLF/MuoEU8zX5oodThvxUnH87LS9VvLqZ7eseOOxLI+zo3WOlp/OCq4HYb3isj7+QW9vuH73xaCmfmCcaV+z0Yk0R7H8zaOCo6MeRPAQ2mJF+K4OuwB6enjtjHvCXAfgMQCVte1ni0Lz/v4qyxaYG9D68dK9XFqFDGvhFJpeqrpuLS73Vu2Mv9aBG9v336l2HY6udKxeQS2PeE4Tpq9geuMWd0yZgMBe/ITP4pSd7mu+90ghWazeVM+qy/K2gjY5Wq9ucjZvq9TKwgiImrkh7sQ2Q3L+lQsa7Zarc51Op2aiuPVILpNgDSlvToiGxzff3WkiJeM81dqBoBd5D2AvwjYL8C6ZdsC+NAfSFpzUuo5AdYuXoHxPg7EINq3OJDZ87zDURCsB9HeMvBSf650Ih0/enQNiK7J/lxEBy3gh063+w0zL02qjHc6XID1rtb7Tne6FLhEqntMcnh6QVP9BEQPO5731qlGZwV8SuQZnIDNDa13nRNwCmkZs5GACUfrqXOS6jKlOWupLoL//8B/A4KnSy72foKfAAAAAElFTkSuQmCC " style="margin-left: 10px; margin-bottom: 4px; color: gray;" width="20px"/></a>
+                  </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner -->
+
+      <section>
+
+        <br><br><br><br><br><br>
+        
+       <div class="flex" style="margin-left: 900px;"><br>
+        <h1 style="color: white; text-align: center;">ADVENTURE IS FOR <br>EVERYONE!</h1><br>
+        <h1 style="color: white; text-align: center;" >Where do You want to Start<br> Your Next Adventure?</h1><br>
+        <input type="text " class="form" placeholder=" Search theplanetd....">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFRpCBHJrQvtWpM7xlSWf3cociMZHqB9dbiw&s" alt="" width="50px" height="50px" style="margin-bottom: 5px; ;" class="hover">
+        
+        <h5 style="color: white; text-align: center; margin-top: 20px;">Popular Searches: <span class="span">Thailand</span>, <span class="span">Canada</span>, <span class="span">United States</span></h5>
+
+        
+       </div>
+  <br><br>
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABDxJREFUSEvFl12IHEUQx/+1vXszu3vds6cGowG5QEyiKOTl4IyCSh5EkfgBikEiPohiQA3EgCIhepxnMBKMPsSPB1GCGCHmQTSCgiKCklOEqEQxmoh6nuhxzPRkd2eP6fJ6nIu7tzu7e4mQeZrtrq5fVXd1zX8J5+ihc8TFksDMLGpajwrmYSa6yAZNzFMx0YmilEeIKO43kb7Add+/lIgeZ+A2AJVOzgmYYeAQjHnGrVR+7hVAVzBPTZUiKXeBeQsA0ctZOt9g5t2uUmNE1Mhakwmuzc4OkxDvArjitEOigzDmAyHE0UK1ehyFQn6uUBiOjVkH5huJ6HYAeWvPwJE4l9s4ODj4Z8YOtQ9HWl9mmD8j4Lx09jDH8Zbi0NDJblnXfX8VgJdAtCG1+93k86OlUum3xevaMg7D8MK8MV8BWJFEzvxU0fOe7HObrT1FWj8L4NF0zTGnWh2h5ctPNftoA9d8/wAR3ZlULNFOR8qxfqHNdnWtnwfzI8kY0V5Xyq2Z4CgMr2RjjqYG77lK3Xwm0HSnREPrTxlYD2AuFmK4XC5PLfhryTgKgtcZuAfAqViI1c2GzQHUtL6OmD9OAETXF6X8pFOA9SBYA+BbW3AMTBSVeqINzMwDkdZ/A5Bg3ud6nr1CHZ9+wXZxPQgOAbgVwElXqZVt4FoYbiBjPkommG9yPe/w/wGuBcF9BLya+l3tet6PybEvOK8Fwb0EvGZ/x0KsyNpmO7+UjBthuM4Y83XK2egqZXvDf+B6EGwHYK8BHCmdbl1nKWCena1EQsymGW91PW/vYvA2AM8l4ChStGyZbrkeQbC76W52PIX5j8QOR8rx5kmemVFRoeCnY9tcpfa0gCPf38REb6YGa12lfljsvd4dvt1VKgm8+Ym0vpyZv0tgRHc5Uh5oAVd9fzRH9HlqsMmR8q1OaWXAO0KTevD9zUT0hn3PGTMyUKl82QK2ra6h9V8MnE/AfkepzVlVvQieCbXr60HwNoA7AEw7Ul483w25BZwavQzgfhuoyefXlEqlX7PgNd8fzxFVHaUmugRoG4jthAMgetGV8uEF25bOlXaaY0m1E33oDA7esBBhlvOscatWIq1tR7sGgGFjVhUrlRMdwcmZaL2fmO+278w8XvS8HUuFJrun9Qtgfihd+4qr1APNftq+TkEQXDAATAIYTuFjRc/b2S+cmXNRGO45/WUCvneMWU+Vyr93OX06KhCrsZjoi0VC4MHi0NAv3QKwAoKZ9wG4NrWb4ji+upOAWIr0iZjoHRjzvhDim0IYHofrDswBK40QI2C2qsNKn0SbMTBphLilXC7/0SnY7mJveroclcvjYLbVmOtzu63Y2+Uq9fQZib1mSBQEa+fr5bFU3qqMDKy8PchxPNHrSNruca+M5qs8X9f6qhzzJS2CHvipqNQkEZleProWV7+Lz8aur38SZwPIWvsP9ZTfLhMlQyMAAAAASUVORK5CYII=" width="80px" height="80px" style="margin-left: 1150px;"/>
+       </section>
+       <!-- logo -->
+        <div class="logo">
+            <img src="https://theplanetd.com/images/Featured-Logos-Front-Page.png" alt="" width="1000px " height="110px" style="margin-left: 270px;">
+            
+        </div>
+
+
+        <div class="aboutdev">
+            <div class="img1" style="margin-top: 70px; margin-left: 30px;">
+                <img src="https://theplanetd.com/images/About-the-planet-d-front-page.jpg" alt="" class="img11">
+            </div>
+
+            <div class="text1" style="margin-top: 40px;">
+                <p style="font-size: 70px; font-weight: bold; color: rgb(56, 69, 92);" class="nocolor"><span  style="margin-left: 210px;">ABOUT </span><br>
+                   <span  style="margin-left: 70px ;">DAVE AND DEB</span> </p><br><br>
+                <p style="font-size: 20px;" class="no">Thanks for stopping by. We’re Dave and Deb the founders of one of the <br> <span style="margin-left: 90px;" class="nop">top 10 travel blogs in the world according to Forbes.</span></p> <br>
+                <p style="font-size: 20px;" class="no">12 years ago we left our jobs, sold everything we owned, and struck out on <br> <span  style="margin-left: 10px;" class="nop"> an adventure that not only changed our lives but inspired others to step</span> <br> <span style="margin-left: 80px;" class="nop">of their comfort zone and enrich their lives through travel.</span></p>   <br>
+
+                <button class="btnn" style=" width: 320px; height: 70px; border-radius: 13px; border: 0px; color: white; font-size: 18px; font-weight: bold; margin-left: 170px;">READ MORE ABOUT US HERE</button>
+
+            </div>
+
+             </div>
+
+
+        </div><br>
+
+        <banner>
+          <div class="trending">
+            <p class="font">WHAT IS TRENDING RIGHT NOW!</p>
+            <p class="font">OLYMPIC FEVER IN PARIS</p>
+
+            <div class="col15">
+              <div class="row15"><img src="https://theplanetd.com/images/Where-to-Stay-in-Paris-Best-Neighborhoods-800x600.jpg" alt="" width="340px">
+                <h4  style="margin-top: 30px; " class="blue">Where To Stay In Paris –<br> Best Neighborhoods To<br> Suit Your Travel Style</h4>
+              </div>
+              <div class="row15"><img src="https://theplanetd.com/images/Is-Paris-expensive-to-visit-800x600.jpg" alt="" width="340px">
+                <h4 style="margin-top: 30px;" class="blue">Is Paris Expensive to Visit? <br>Trip Costs And Budgets</h4>
+              </div>
+              <div class="row15"><img src="https://theplanetd.com/images/one-day-in-paris-itinerary-france-800x600.jpeg" alt="" width="340px">
+                <h4 style="margin-top: 30px;" class="blue">Ultimate One Day in Paris <br> Itinerary 2024 – An Epic <br> Day In Paris</h4>
+              </div>
+              <div class="row15"><img src="https://theplanetd.com/images/Paris-in-October-Arc-de-Triomphe-800x600.jpg" alt="" width="340px">
+                <h4 style="margin-top: 30px;" class="blue">Paris in October: Weather, <br>Fall Tips, And What to <br> Expect</h4>
+              </div>
+            </div><br><br><br>
+        </banner>
+
+        <banner>
+           <div class="hehe" style=" background: linear-gradient(#d3d1d1, #fdfeff); height: 130px;"><br><br>
+            <h1 style="font-weight: bold; color: rgb(56, 69, 92);">HOW CAN WE HELP YOU TRAVEL MORE?
+           </div>
+         
+          <div class="col20" style=" background-color: rgb(255, 255, 255); " >
+
+            <div class="row21">
+              <br><br><br><br><br><br>
+              <img width="90px" height="90px" src="./img/map-alt-solid-180.png" alt="" >
+              <p style="font-weight: bold; font-size: 45px; color: white;">DESTINATIONS</p>
+              <p style="font-size: 23px; font-weight: bold; color: rgb(70, 60, 60); color: white;">Explore Desination around the world <br> from 110 countries on all 7 <br>Continents</p>
+              
+            </div>
+            <div class="row22">
+              <br><br><br><br><br><br>
+              <img width="90px" src="./img/book-open-regular-180.png" alt="" height="90px">
+              <p style="font-weight: bold; font-size: 45px; color: white;">ITINERARIES</p>
+              <p style="font-size: 23px; font-weight: bold; color: rgb(70, 60, 60); color: white;">Discover detailed itenaries from 3 <br> days to 1 week for multiple<br>Destinations.</p>
+              
+
+            </div>
+            <div class="row23">
+              <br><br><br><br><br><br>
+              <img width="90px" src="./img/calendar-solid-180.png" alt="" height="90px">
+              <p style="font-weight: bold; font-size: 45px; color: white;">TRAVEL TIPS</p>
+              <p style="font-size: 23px; font-weight: bold; color: rgb(70, 60, 60); color: white;">Learn from the best.Travel tips <br> gathered from our 10 years of full- <br>time travel.</p>
+              
+
+            </div>
+
+          </div><br><br><br>
+        </banner>
+        
+        <banner>
+          <div class="trending " style="background: linear-gradient(#f7f4f4, #fafbfc);"><br><br>
+            <p class="font">LATEST BLOG POSTS</p>
+           
+
+            <div class="col15">
+              <div class="row15"><img src="https://theplanetd.com/images/Le-Boat-Ontario-Trent-Canal-800x600.jpg" alt="" width="440px" style="margin-left: 37px;">
+                <h4  style="margin-top: 30px; " class="blue">A Boating Newbie on the Trent-<br>Severn Waterway: Riding the River<br> With Le Boat</h4>
+              </div>
+              <div class="row15"><img src="https://theplanetd.com/images/Where-to-stay-in-London-neighbourhoods-800x600.jpg" alt="" width="440px">
+                <h4 style="margin-top: 30px;" class="blue">Where to Stay in London in 2024: Our <br> Favourite Places And <br>Neighbourhoods</h4>
+              </div>
+              <div class="row15"><img src="https://theplanetd.com/images/Best-Summer-Destinations-in-Europe-800x600.jpg" alt="" width="440px">
+                <h4 style="margin-top: 30px;" class="blue">17 Best Summer Destinations in <br>Europe (2024)</h4>
+
+              </div>
+              
+              </div>
+              <br><br>
+
+              <button class="btnn" style=" width: 320px; height: 70px; border-radius: 13px; border: 0px; color: white; font-size: 18px; font-weight: bold; ">READ MORE POSTS HERE</button> <br><br><br><br><br>
+
+            </div> 
+            </banner> <br><br>
+
+            <banner class="ok">
+              <div class="youtube">
+                <p style="font-size: 50px; font-weight: bold; color: rgb(56, 69, 92);" > WATCH OUR LATEST TRAVEL VIDEO</p>  <br>
+                <h4 class="blue">NEW VIDEOS EACH WEEK!</h4>
+
+              </div>
+
+              <div class="iframe">
+                <div class="video"><br>
+                  <iframe width="760" height="415" src="https://www.youtube.com/embed/49r49IAQ0qM?si=yLp5t9vcGH4MD-rD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-left: 70px;"></iframe>
+                  </div>
+
+                  <div class="side" style="margin-left: 30px; margin-top: 40px;">
+                  <p  class="blue" style="font-size: 40px; font-weight: bold; ">Watch our YouTube <br> videos:</p>
+                  
+                  <p ><span style="margin-right: 100px; font-weight: bold; font-size: 20px;"> Read our full experience here <span  class="blue">Is Portugal Expensive To</span> </span> <br><span style="margin-right: 315px; font-weight: bold; font-size: 20px;"  class="blue">Visit? Travel Costs And Budgets</span></p>
+                 <p><span style="margin-right: 120px;  font-weight: bold; font-size: 20px;"><span   class="blue">Subscribe to our channel</span> for more travel videos, and </span> <br><span style="margin-right: 360px;  font-weight: bold; font-size: 20px;  " class="blue"> Watch the full video here.</span></p>
+                </div>
+                            
+               
+              </div>
+              &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  <button class="btnn" style=" width: 200px; height: 70px; border-radius: 13px; border: 0px; color: white; font-size: 18px; font-weight: bold;">READ MORE</button> <br><br><br><br><br>
+            </banner> <br><br><br><br>
+
+            <banner>
+
+              <br><br><br>
+              <div class="last">
+
+                <div class="last1" style="margin-left: 50px; margin-top: 60px;">
+                  <br> 
+                  <br> 
+                  <br> 
+                <h3 style="font-size: 30px;" >ABOUT</h3> <br>
+                
+                <p style="font-size: 20px;" class="blue">About Dave and Deb</p>
+                <p style="font-size: 20px;" class="blue">Contact Us</p>
+                <p style="font-size: 20px;"  class="blue">Privacy Policy</p>
+                <p  style="font-size: 20px; " class="blue">Work With Us</p>
+                <p style="font-size: 20px;" class="blue">Press and Media</p></div>
+                <div class="last1" style="margin-left: 50px; margin-top: 60px;" >
+                  <br> 
+                  <br> 
+                  <br>
+                  <h3  style="font-size: 30px;">FOLLOW US ON SOCIAL</h3>
+                  <br>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwZJREFUSEvllknojlEUxn9/YxmKIvOQDFFmNmQIO0RSlIzFws4QJWRIFGKjLMxKWRgybSgZisyJSCxkSiky7Qzn0Xn1dt37vu9n81dufb313XvPc89znjPUUU+rrp5w+eeBOwA9gYYlDH0DngJvypgs8rg9sBWYCLQuMxTsvwfOAitSj0gBC+yoATd3g1+Au4A8KlpNgCFAUz/0GZgBnAsvxYCbAc8AebzfvruB2xVAM9uNgFHAev++BnqZ91/z4DFgXVjrHs+skWIdn22gsnsIuAiM9UesKwN+CXRyj9/WCCxQAWrN9/DcA14BnYuARa8U+dg87psA1aOmACOAH8A14ITfmwMc9HsLPFSfgBZAW+BdZjOkWsJQPK96fELsRWZkG9Ay2PgILAH2AfOc6geWETddLz2A/oD++7VCYInisqfCpMD4MgcVyE7gDtAYGOCg8krg2suv+w4qhsROFHgCcN6pm5a7PdhfL6qGeszyxrv6Q8SEWHuY21SMBzqDYrIQ+JjRMj13eYOl0xpgKbAjEfuVwBZgtTGxKXdGzOjho4ErKeDxwIWIx6cBUa+fKlJsiSE9OHy0NCMWlFaXUsDaVO6dMZFNzlk/6UqWmk/VCCyBDTPtjHPbUaozYBkXSLZUUFRYlpuityeAVznF+m7Onbnluhjjwi0EDj3u4rmtsjcoIq5uXixULvsEjaGSuEZ6DiuOYTottiKwy7xW4VfKyBM1BSlWaaQav9Aq1J6AESm8n2ljuN+Jeiz1SYWpAiLDojpWQKT4vZEwqOGogOiByukosOrpC6uzz4HuiViqZE61fBc7apPXrYgcT/TdBt6V1CYVLvWBKLAmjA9eWztWmSQSj8v+lpqlaoWnVb61xtqi6FKBPwLMKjFctq3yqzKsvi6bv1cMuA3wxMcdTQ4bgRvWo7+Xofh+NgjonsKhMah3vjPpXGr0mWsxPpAD+tvRRybUKg+Hjy4a9lRbpVRVMImkliV2VAuUAaL7j1Vlrm5XMBSkHvMIKJxeqgDX4mnls/8f8E/8tqAfEQrEDwAAAABJRU5ErkJggg==" class="hover1"/><span>&ensp;&ensp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAn1JREFUSEvFll1oz1EYxz+LRsu83WxygaSIXLmQJuXCXNokFyhyRUSyxM3ukJfalEutlLU0K5m4cSNlYrUScuO1vCTZGmmLOF+dv87/OOd3zv/nYk/tYr//c57P85znOc/z1DFFUjdFXGoFTwPWAouBBdbpd8BrYAj4mRtILngZcBxoA+ZGjH8BrgGngBcpB1LgBuA0sB9QtDnyAzgHdAKTsQNF4EXATWBlDi2g8xDYAigV/0gMvAK4B8wvCa0cE3SdrYEqUyFwsy0URZySj8Bd4CXwHZgObAWWOwefWviYaywE7gO2p4jGuPT2AaOe7kFzUxe8bxeBA0VgefosA6ooVkeezyFT+V2eDRWZnuD7ync/4svArgywrnPA05Nh/bUDitqXMyYdx0LgeuATMDsDrJt57uj129wWHdXbXhoCbwTuZEClIufGra4cnsg899dh96p3Az2ZBhqBr1Z3luNE6rje9XUpueAOQHnIkbLgw0C3Dz4KnI1QXwFLcjwCrgLbIrpinPfBqmZVdUhqAT8GVkXs7AB6fbDG3f3IgaqKLIhcg+SbmVAzIjprgGEfrHan0aZi8UXd6U9urJx0Jo+q+oT9rtwfiUBlQ73/lw/W/znvUXpliusKsLPilN+5dBUaZykpA1ben8TA+n7LTKfNCXKtYN1kVaXHxqKGwLwCeC3gD4Dme9UUiy0CG8xSd9usPTMj8Fyw2qpa8SPfTtHq0wIMAnMC8BywBs4ms/6MhJxPLXsLbSfS+uJKCnzDrDt7zHj8HEtXClx5cuuBvabBtAJNkef01qbnEvAg9SxywL4N9ew3zvahbiVngtvk/0Sccr7U72UiLgXyD/0GGLB0H1VMfAgAAAAASUVORK5CYII="  class="hover1"/></span><span>&ensp;&ensp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvt1jtoFUEUxvFfUBCCooWNpBGDdtrYiYWNEiLRMmUQUUFQBLVRfGBeRVJEbCzEImWqCKIopAi2goiKiGhlIRZ2aqGie2AX1sFw517u5qbIaZYdznx/zjdnHn16FH094loHr5rza8rqjRjBAXwrLdiO3djUwpLveI34RvzBSzzEr/rctOJ9eICdXfb8I47hTaWbgp/hYJehldwTDP0PPIBPDUEr2R34HD/1ig8X6/q0YfAhLKfgE7ifAY4e2IW9GblpyigWUvBFzGaIXcckTmIK0fG5cQr3UvDNov1vZCgEeLzM24ZbOFuMbciYex53UnBUG1W3ijq4yt2D2/WuXUHkcuVqvbkmcLUVFdcQufWIw2UOwy3mXykOoelOra6Dt5RWn8u0+kLpzD/b6RJmMiuOpjpdrnU7zTVW7Ij5tOIzuJsBXsRgh9spluJxCj6OEG0y4i54lYKjM981SUU/fqTg+H+O/Q3BH+FopZ3eTgFdwtYuwz+Ud/zblcAxvhlH8LV8DMSZHLdKO/EF74tz4SdelA+B33WBNfX0aaeyjnPXK+7YunYn9szqv6QmPx+V5GUqAAAAAElFTkSuQmCC"/></span><span>&ensp;&ensp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfpJREFUSEvt1kuoT1EUx/HPjYEkz0J5RUlKDDDxyiOSMhDJQJEyUEhRBmJgQCkJkamJt4wkE4WBxESGTChJmUh5F2fVvv/uPd1z9/73v/lP7q7dGey1f9+91l57rdOjS6OnS1zD4P8W+aEI9ThcxjLMwA+cw2l8S55MSd9PvZ7VwaNxBXvwp8D9aXiK2QPYfsB1LMBYLO9rUwdvrQzv4B62F8DvY1PmgG+wMUXjcZPHB3AhLT7Hzmq+bRBeghcFUXlXRXEqtuBBE3gVWqfCT5zARXyvQQ7ifAH4c3Lg4WChHoWvGFkTjCS5i2vVyV/hI47jZAH4THXoo3W7gbJ6X8rSwTS/IObMAvAxnMqBd2NhlVyLsLZAtMQkNK/mwBvQ7y5KlDM28b6f5cBxt5HFs4YAGBJxHRPwNweO9ZXpHU8aAvhN7BhIp6lkRkU6jL0Y08EBVteeZ0uqCbwf27C4A/BLLG06dBN4Pl5jRAfersOjdsFhvxk3EI2j3XEWRwbblGuLkxFhX4MVhfQnWI9fnYCjnUWSHUqtLceOCO3KQUOkr8cTU8WKZj4vzahe8Q5zI95rlMZLOcPe9XqoI5Ojrs4tFPiNWykqrb+Lkr1NdxyeRoOPP4vpmIPx1X1Hi4v5PhWZ26k6lbD62eSSq23B0g3D4NJIdWzXtVD/A1e4TB/sCCruAAAAAElFTkSuQmCC"  class="hover1"/></span><span>&ensp;&ensp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAnFJREFUSEvllkuIjlEYx3+jkEJuGco9NsqtaZLVLKTYoKQQKVHUCFFYoGlGNOUack1RSCQbZWthgSIWFsSQBVEKkUtx/vX/6nh93/u9Z141ydm89ZzzPL/zXM/bQA+thh7i8s+BBwONwBDgDfAC+JESvRSP+wAbgfXAqAzkO3AJOA7cLnKBouAm4CIwqYDRKyEK64B3eWeLgOXhQaAX8A04CxwCHttwf2Ah0BH2xlp2D2gBPteC1wMvsafSfwrM87eavX7AdWCON08Da7oDVk67gJHAB2A68NyGJgMvgU8Zw8OAZ8AAF9tEF94f/DyP59sDKW0G9jvcVx3aL8Bc4FbG6mVgsWVK05FqXueBBdpkpRFum6XAhciQ8rojY3gPsM2yfSEqW1LB54AVBgqsdSaEeFVkSBdT4cVrJ9BmgWysTAWfAlY7R+OsfDJTMFOBRxnD8RldqhK1347lhVr5OezTAms6aYAcsOxViMDoKt7cAZotbwWOpno83hUqPRWILrII0IDQ0pTSoIiXxujrSDAjFOKDVLDOnw99u9yto+EQF5yggtfK70O34M/ugHsDu0M7fQTafftpNpTN3xTgLtDX+2q1m9WgktWbXLHeQOC9e1lyjU/l8AkwIQwNtc4gK5wIIV9bC5oK1ri8YWOaWmNqGD4WLrih3jOZ4vFeYKthywCN1AXA7JB7RUNttQu4ludpZS8FrHd2lhWHA2+LAP5GjlVgegL1HOqRKLWKejw0etgV8u2lqAlVrULS5FIl67enVJhTqrricWdUYKWcLhpqnbsPzAxh/lqKaOWiYB3X30XuD1zKhVLAKXbrnv3/wL8A3D1rHxkR3vEAAAAASUVORK5CYII="  class="hover1"/></span>
+                  <br><br><br>
+                  <input type="text " class="form" placeholder=" Search theplanetd....">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFRpCBHJrQvtWpM7xlSWf3cociMZHqB9dbiw&s" alt="" width="53px" height="50px" style="margin-bottom: 5px; margin-right: 120px;" class="hover">
+                </div>
+                <div class="last1" style="margin-left: 100px; margin-top: 60px;">
+                  <br> 
+                  <br> 
+                  <br>
+                  <h3  style="font-size: 30px;" >TRAVEL RESOURCES</h3>
+                  <br>
+                  <p  style="font-size: 20px;" class="blue">Best Travel Tips</p>
+                  <p  style="font-size: 20px;" class="blue">How to Save Money for Travel</p>
+                  <p  style="font-size: 20px;" class="blue"> The Ultimate Travel Packing List</p>
+                  <p  style="font-size: 20px;" class="blue"> Travel Safety Tips</p>
+                  <p style="font-size: 20px;" class="blue">How to Travel on a Budget</p>
+
+                </div>
+              </div>
+            </banner>
+            <div class="final">
+              <div class="first">
+               <h6 style="color: white;">© 2024 THE PLANET D | ADVENTURE TRAVEL BLOG</h6>
+              </div>
+              <div class="ok1">
+              <div class="first">
+                <h6>START HERE</h6>
+                 <h6>PRIVACY/DISCLOSURE POLICY</h6>
+                 <h6>TRAVEL BLOG</h6>
+              </div>
+              </div>
+
+            </div>
+</body>
+</html>
